@@ -1,0 +1,26 @@
+#include <graphics.h>
+#include <conio.h>
+
+int main() {
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+
+    // Draw face (circle)
+    circle(250, 200, 100);
+
+    // Draw eyes (small circles)
+    circle(220, 170, 10); // Left eye
+    circle(280, 170, 10); // Right eye
+
+    // Draw nose (triangle)
+    line(250, 180, 240, 210);
+    line(250, 180, 260, 210);
+    line(240, 210, 260, 210);
+
+    // Draw mouth (rectangle)
+    rectangle(220, 240, 280, 260);
+
+    getch();
+    closegraph();
+    return 0;
+}
